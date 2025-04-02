@@ -1,0 +1,181 @@
+Forward Stability Analysis:
+--------------------------------------------------
+Input tensor shape: torch.Size([32, 16, 128])
+Input statistics - Mean: 12.4977, Std: 21.6695
+Input range: [-4.7072, 50.0000]
+--------------------------------------------------
+Layer Norm:
+  Mean: -0.0000
+  Std: 0.8660
+  Range: [-4.1984, 4.2144]
+  Norm ratio: 0.0346
+  Sample values (extreme row): ['0.0000', '0.0000', '0.0000', '0.0000', '0.0000']...
+--------------------------------------------------
+Batch Norm:
+  Mean: 0.0000
+  Std: 1.0000
+  Range: [-0.7976, 1.7309]
+  Norm ratio: 0.0400
+  Sample values (extreme row): ['1.7307', '1.7307', '1.7306', '1.7305', '1.7307']...
+--------------------------------------------------
+RMS Norm:
+  Mean: 0.2474
+  Std: 0.9689
+  Range: [-4.1595, 4.2785]
+  Norm ratio: 0.0400
+  Sample values (extreme row): ['1.0000', '1.0000', '1.0000', '1.0000', '1.0000']...
+--------------------------------------------------
+No Norm:
+  Mean: 12.4977
+  Std: 21.6695
+  Range: [-4.7072, 50.0000]
+  Norm ratio: 1.0000
+  Sample values (extreme row): ['50.0000', '50.0000', '50.0000', '50.0000', '50.0000']...
+--------------------------------------------------
+Using device: cpu
+Creating synthetic dataset...
+/home/pyla/stan/GrokfastPrivate/side/normalization.py:257: UserWarning: Creating a tensor from a list of numpy.ndarrays is extremely slow. Please consider converting the list to a single numpy.ndarray with numpy.array() before converting to a tensor. (Triggered internally at /opt/conda/conda-bld/pytorch_1727971040866/work/torch/csrc/utils/tensor_new.cpp:278.)
+  self.data = torch.tensor(self.data, dtype=torch.long)
+Model with dyt normalization has 1,693,446 trainable parameters
+
+Final Results:
+--------------------------------------------------
+DYT Normalization:
+  Final Training Accuracy: 0.6545
+  Final Validation Accuracy: 0.6315
+--------------------------------------------------
+LAYER Normalization:
+  Final Training Accuracy: 0.9295
+  Final Validation Accuracy: 0.9310
+--------------------------------------------------
+BATCH Normalization:
+  Final Training Accuracy: 0.8584
+  Final Validation Accuracy: 0.8770
+--------------------------------------------------
+RMS Normalization:
+  Final Training Accuracy: 0.8621
+  Final Validation Accuracy: 0.8485
+--------------------------------------------------
+NONE Normalization:
+  Final Training Accuracy: 0.9490
+  Final Validation Accuracy: 0.9470
+--------------------------------------------------
+
+
+SEED 0
+Forward Stability Analysis:
+--------------------------------------------------
+Input tensor shape: torch.Size([32, 16, 128])
+Input statistics - Mean: 12.4982, Std: 21.6691
+Input range: [-4.3433, 50.0000]
+--------------------------------------------------
+Dynamic Tanh:
+  Mean: 0.2493
+  Std: 0.5637
+  Range: [-0.9743, 1.0000]
+  Norm ratio: 0.0246
+  Sample values (extreme row): ['1.0000', '1.0000', '1.0000', '1.0000', '1.0000']...
+--------------------------------------------------
+Layer Norm:
+  Mean: -0.0000
+  Std: 0.8660
+  Range: [-4.0444, 4.3604]
+  Norm ratio: 0.0346
+  Sample values (extreme row): ['0.0000', '0.0000', '0.0000', '0.0000', '0.0000']...
+--------------------------------------------------
+Batch Norm:
+  Mean: 0.0000
+  Std: 1.0000
+  Range: [-0.7745, 1.7310]
+  Norm ratio: 0.0400
+  Sample values (extreme row): ['1.7307', '1.7307', '1.7307', '1.7308', '1.7307']...
+--------------------------------------------------
+RMS Norm:
+  Mean: 0.2482
+  Std: 0.9687
+  Range: [-4.1174, 4.2402]
+  Norm ratio: 0.0400
+  Sample values (extreme row): ['1.0000', '1.0000', '1.0000', '1.0000', '1.0000']...
+--------------------------------------------------
+No Norm:
+  Mean: 12.4982
+  Std: 21.6691
+  Range: [-4.3433, 50.0000]
+  Norm ratio: 1.0000
+  Sample values (extreme row): ['50.0000', '50.0000', '50.0000', '50.0000', '50.0000']...
+--------------------------------------------------
+
+
+Final Results:
+--------------------------------------------------
+DYT Normalization:
+  Final Training Accuracy: 0.7485
+  Final Validation Accuracy: 0.7205
+--------------------------------------------------
+LAYER Normalization:
+  Final Training Accuracy: 0.8601
+  Final Validation Accuracy: 0.8450
+--------------------------------------------------
+BATCH Normalization:
+  Final Training Accuracy: 0.6641
+  Final Validation Accuracy: 0.5880
+--------------------------------------------------
+RMS Normalization:
+  Final Training Accuracy: 0.8739
+  Final Validation Accuracy: 0.8740
+--------------------------------------------------
+NONE Normalization:
+  Final Training Accuracy: 0.9417
+  Final Validation Accuracy: 0.9415
+--------------------------------------------------
+
+
+ADAM W 
+Final Results:
+--------------------------------------------------
+DYT Normalization:
+  Final Training Accuracy: 0.6488
+  Final Validation Accuracy: 0.6145
+--------------------------------------------------
+LAYER Normalization:
+  Final Training Accuracy: 0.9463
+  Final Validation Accuracy: 0.9500
+--------------------------------------------------
+BATCH Normalization:
+  Final Training Accuracy: 0.6887
+  Final Validation Accuracy: 0.6160
+--------------------------------------------------
+RMS Normalization:
+  Final Training Accuracy: 0.9275
+  Final Validation Accuracy: 0.9460
+--------------------------------------------------
+NONE Normalization:
+  Final Training Accuracy: 0.9225
+  Final Validation Accuracy: 0.9305
+--------------------------------------------------
+Total execution time: 135.01 seconds
+
+ADAMW 1e-3
+Final Results:
+--------------------------------------------------
+DYT Normalization:
+  Final Training Accuracy: 0.7429
+  Final Validation Accuracy: 0.7360
+--------------------------------------------------
+LAYER Normalization:
+  Final Training Accuracy: 0.9063
+  Final Validation Accuracy: 0.8970
+--------------------------------------------------
+BATCH Normalization:
+  Final Training Accuracy: 0.6910
+  Final Validation Accuracy: 0.6090
+--------------------------------------------------
+RMS Normalization:
+  Final Training Accuracy: 0.8842
+  Final Validation Accuracy: 0.8730
+--------------------------------------------------
+NONE Normalization:
+  Final Training Accuracy: 0.9306
+  Final Validation Accuracy: 0.9250
+--------------------------------------------------
+Total execution time: 132.67 seconds
